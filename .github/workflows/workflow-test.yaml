@@ -34,6 +34,7 @@ jobs:
           ls -la $GITHUB_WORKSPACE 
           ls -la 
           echo "Jochen ist:"$JOCHENS_AGE >> umgebung.txt 
+          echo "Jochen ist:"$JOCHENS_AGE
           
       - name: Commit files
         run: |
