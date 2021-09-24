@@ -28,3 +28,5 @@ jobs:
         run: |
           env > umgebung.txt
           ls -la >> umgebung.txt
+          ls -la $GITHUB_WORKSPACE 
+          ls -la 
