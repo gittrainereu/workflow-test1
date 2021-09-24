@@ -25,11 +25,15 @@ jobs:
       # Runs a single command using the runners shell
       - run: echo Hello, world!
       - name: In repo schreiben
+        env:
+          JOCHENS_AGE: ${{secrets.JOCHENS_AGE}}
+        
         run: |
           env > umgebung.txt
           ls -la >> umgebung.txt
           ls -la $GITHUB_WORKSPACE 
           ls -la 
+          echo "Jochen ist:"$JOCHENS_AGE >> umgebung.txt 
           
       - name: Commit files
         run: |
